@@ -1,0 +1,7 @@
+[Unit]
+Description=Mpv audio server
+[Service]
+Type=exec
+ExecStart=/usr/bin/mpv --really-quiet --ytdl-format=bestaudio --idle=yes --input-ipc-server=/tmp/mpv-audio-server-%u.socket
+[Install]
+WantedBy=default.target
